@@ -1,15 +1,19 @@
 :root {
     --accent-color: rgb(26, 27, 28);
     --td-color: rgb(225, 225, 225);
+
+    --title-font: Montserrat;
 }
 
 body {
     background-color: rgb(231, 231, 231);
-    background-image: url(background.png);
+    background-image: url(background3.png);
     background-size: cover;
+    margin: 0px;
 }
 
-section{
+div.page{
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +21,14 @@ section{
 }
 
 div.container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     padding: 40px;
     min-height: 480px;
     justify-content: center;
-    /* align-items: center; */
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(5px) saturate(100%);
-    border-radius: 10px;
-    border-width: 10px;
-    border-color: white;
+    border-radius: 5px;
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -47,7 +49,7 @@ h2 {
     color: white;
     font-size: 30px;
     font-weight: bold;
-    font-family: calibri;
+    font-family: var(--title-font);
 }
 
 form {
@@ -63,11 +65,16 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
     padding: 5px;
-    border: 0px;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid white;
     color: white;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.0);
     margin: 0px, 0px, 0px, 5px;
+}
+
+input[type=number]:focus {
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 input[type=submit] {
@@ -98,9 +105,6 @@ td {
     color: white;
 }
 
-td.variable {
-}
-
 td.total {
     font-weight: bold;
 }
@@ -123,4 +127,36 @@ p.negative {
     margin: 0px;
     color: rgb(255, 139, 139);
     font-weight: bold;
+}
+
+
+
+/* == Menu Styles == */
+div.menu_container {
+    display: flex;
+    height: 100vh;
+}
+
+div.menu {
+    background-color: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(5px) saturate(100%);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0px;
+    padding: 30px;
+    padding-top: 20px;
+    left: 0px;
+    min-width: 150px;
+}
+
+ul {
+    padding-left: 0px;
+    color: white;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 25px;
+    font-family: var(--title-font);
+    font-size: 1.2em;
 }
