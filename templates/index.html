@@ -1,5 +1,6 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
     <title>My Flask Site</title>
@@ -8,90 +9,100 @@
 </head>
 <body>
 
-
-    <section>
-        <div class="container">
-            <div class="heading">
-                <h2>Loan Capital Balancer</h2>
-            </div>
-            <div class="capitalform">
-                <form action="/greet" method="POST">
-                    <table>
-                        <tr>
-                            <td class="tabletitle" colspan="2">Asset You're Buying</td><td class="tabletitle" colspan="2">Investment Plan</td>
-                        </tr>
-                        <tr>
-                            <td class="variable">Total Value Of Asset: </td>
-                            <td>$<input type="number" name="assetValue" placeholder="0.00" value="{{ assetValue }}"></td>
-
-                            <td class="variable">Total Invested: </td>
-                            <td class="total">${{ loanAmount }}</td>
-                        </tr>
-                        <tr>
-                            <td class="variable">Down Payment: </td>
-                            <td>$<input type="number" name="downPayment" placeholder="0.00" value="{{ downPayment }}"></td>
-
-                            <td class="variable">Initial Principal: </td>
-                            <td>$<input type="number" name="initialPrincipal" placeholder="0.00" value="{{ initialPrincipal }}"></td>
-                        </tr>
-                        <tr>
-                            <td class="variable">Loan Amount: </td>
-                            <td class="total">${{ loanAmount }}</td>
-
-                            <td class="variable">Monthly Contribution: </td>
-                            <td class="total">${{ monthlyContribution }}</td>
-                        </tr>
-                        <tr>
-                            <td class="variable">Annual Interest Rate (APR): </td>
-                            <td><input type="number" name="apr" placeholder="0.0%" value="{{ apr }}"></td>
-
-                            <td class="variable">Annual Return (APY): </td>
-                            <td><input type="number" name="apy" placeholder="0.0%" value="{{ apy }}"></td>
-                        </tr>
-                        <tr>
-                            <td class="variable">Loan Term (Years): </td>
-                            <td><input type="number" name="loanTerm" placeholder="0" value="{{ loanTerm }}"></td>
-
-                            <td class="variable">Compound Periods (per Year): </td>
-                            <td><input type="number" name="comp" placeholder="0" value="{{ comp }}"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp</td><td>&nbsp</td>
-                            <td class="variable">Years: </td>
-                            <td class="total">{{ loanTerm }}</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td>
-                        </tr>
-                        <tr>
-                            <td class="total">Balance: </td>
-                            <td>${{ loanBalance }}</td>
-
-                            <td class="total">Balance: </td>
-                            <td>${{ invBalance }}</td>
-                        </tr>
-                        <tr>
-                            <td class="total">Cost of Capital: </td>
-                            <td><p class="negative">${{ interest }}</p></td>
-
-                            <td class="total">Return: </td>
-                            <td>${{ invReturn }}</td>
-                        </tr>
-                        <!--performance-->
-                        <tr>
-                            <td class="total">Total Cash Flow: </td>
-                            <td></td>
-
-                            <td class="total">Total Gain/Loss: </td>
-                            <td><p class="{{ result_class }}">${{ performance }}</p></td>
-                        </tr>
-                    </table>
-                    <div class="submit">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
+    <div class="menu_container">
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Loan Calculator</li>
+                <li>DCA Calculator</li>
+            </ul>
         </div>
-    </section>
+    
+
+        <div class="page">
+            <div class="container">
+                <div class="heading">
+                    <h2>Loan Capital Balancer</h2>
+                </div>
+                <div class="capitalform">
+                    <form action="/greet" method="POST">
+                        <table>
+                            <tr>
+                                <td class="tabletitle" colspan="2"><h3>Asset You're Buying</h3></td><td class="tabletitle" colspan="2"><h3>Investment Plan</h3></td>
+                            </tr>
+                            <tr>
+                                <td class="variable">Total Value Of Asset: </td>
+                                <td>$<input type="number" name="assetValue" placeholder="0.00" value="{{ assetValue }}"></td>
+
+                                <td class="variable">Total Invested: </td>
+                                <td class="total">${{ loanAmount }}</td>
+                            </tr>
+                            <tr>
+                                <td class="variable">Down Payment: </td>
+                                <td>$<input type="number" name="downPayment" placeholder="0.00" value="{{ downPayment }}"></td>
+
+                                <td class="variable">Initial Principal: </td>
+                                <td>$<input type="number" name="initialPrincipal" placeholder="0.00" value="{{ initialPrincipal }}"></td>
+                            </tr>
+                            <tr>
+                                <td class="variable">Loan Amount: </td>
+                                <td class="total">${{ loanAmount }}</td>
+
+                                <td class="variable">Monthly Contribution: </td>
+                                <td class="total">${{ monthlyContribution }}</td>
+                            </tr>
+                            <tr>
+                                <td class="variable">Annual Interest Rate (APR): </td>
+                                <td><input type="number" name="apr" placeholder="0.0%" value="{{ apr }}"></td>
+
+                                <td class="variable">Annual Return (APY): </td>
+                                <td><input type="number" name="apy" placeholder="0.0%" value="{{ apy }}"></td>
+                            </tr>
+                            <tr>
+                                <td class="variable">Loan Term (Years): </td>
+                                <td><input type="number" name="loanTerm" placeholder="0" value="{{ loanTerm }}"></td>
+
+                                <td class="variable">Compound Periods (per Year): </td>
+                                <td><input type="number" name="comp" placeholder="0" value="{{ comp }}"></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td><td>&nbsp</td>
+                                <td class="variable">Years: </td>
+                                <td class="total">{{ loanTerm }}</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="total">Balance: </td>
+                                <td>${{ loanBalance }}</td>
+
+                                <td class="total">Balance: </td>
+                                <td>${{ invBalance }}</td>
+                            </tr>
+                            <tr>
+                                <td class="total">Cost of Capital: </td>
+                                <td><p class="negative">${{ interest }}</p></td>
+
+                                <td class="total">Return: </td>
+                                <td>${{ invReturn }}</td>
+                            </tr>
+                            <!--performance-->
+                            <tr>
+                                <td class="total">Total Cash Flow: </td>
+                                <td></td>
+
+                                <td class="total">Total Gain/Loss: </td>
+                                <td><p class="{{ result_class }}">${{ performance }}</p></td>
+                            </tr>
+                        </table>
+                        <div class="submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>
 </body>
 </html>
