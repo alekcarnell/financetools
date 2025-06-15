@@ -1,1 +1,126 @@
+:root {
+    --accent-color: rgb(26, 27, 28);
+    --td-color: rgb(225, 225, 225);
+}
 
+body {
+    background-color: rgb(231, 231, 231);
+    background-image: url(background.png);
+    background-size: cover;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.container {
+    position: relative;
+    padding: 40px;
+    min-height: 480px;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(5px) saturate(100%);
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: white;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+}
+
+div.heading {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+div.capitalform {
+    display: block;
+    width: 100%;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: calibri;
+}
+
+form {
+    font-family: calibri;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    padding: 5px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0px, 0px, 0px, 5px;
+}
+
+input[type=submit] {
+    border: 0px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.15);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+div.submit{
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+td.variable {
+}
+
+td.total {
+    font-weight: bold;
+}
+
+td.tabletitle { 
+    font-weight: bold;
+}
+
+
+/* == Results Styling == */
+p.positive {
+    padding: 0px;
+    margin: 0px;
+    color: rgb(143, 255, 143);
+    font-weight: bold;
+}
+
+p.negative {
+    padding: 0px;
+    margin: 0px;
+    color: rgb(255, 139, 139);
+    font-weight: bold;
+}
